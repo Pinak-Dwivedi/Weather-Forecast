@@ -23,9 +23,17 @@ function setIconMap(codes: number[], value: string): void {
 export function getIconUrl(iconCode: number) {
   const icon = ICONS.get(iconCode);
 
-  if (!icon) return `/icons/cloud.svg`;
+  if (!icon) return `./icons/cloud.svg`;
 
-  return `/icons/${icon}.svg`;
+  return `./icons/${icon}.svg`;
+}
+
+export function getIconName(iconCode: number) {
+  const iconName = ICONS.get(iconCode);
+
+  if (!iconName) return "weather";
+
+  return iconName;
 }
 
 export default ICONS;

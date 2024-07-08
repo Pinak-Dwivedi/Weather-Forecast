@@ -1,7 +1,7 @@
 import "./style.css";
 import "./themeSwitch.ts";
 import getWeather, { APIErrorType, WeatherDataType } from "./weather.ts";
-import { getIconUrl } from "./icons.ts";
+import { getIconName, getIconUrl } from "./icons.ts";
 import {
   getElement,
   getDateTime,
@@ -94,6 +94,7 @@ function setCurrentWeather(weatherData: WeatherDataType) {
 
   setElementContent(currentTempElement, temp, true);
   currentIconElement.src = getIconUrl(weatherCode);
+  currentIconElement.alt = getIconName(weatherCode);
 
   const dateTime = getDateTime(time);
 
@@ -350,6 +351,7 @@ function setCardValues(
   }
 
   cardIcon.src = getIconUrl(weatherCode[valueIndex]);
+  cardIcon.alt = getIconName(weatherCode[valueIndex]);
 
   setElementContent(cardPrecipitation, precipitation[valueIndex]);
   appendPrecipitationUnit(cardPrecipitation);
