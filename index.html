@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/apple-touch-icon.png"
+    />
+
+    <title>Weather Forecast</title>
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+  <body class="dark">
+    <header class="header">
+      <h1 class="heading">Weather Forecast</h1>
+
+      <div class="theme-switch-button" data-theme-switch-button>
+        <div class="theme-switch-cursor" data-theme-switch-cursor></div>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- curent weather section -->
+      <section class="section-left">
+        <article class="section-header">
+          <h2 class="current-temp" data-current-temp>28&deg;C</h2>
+
+          <img
+            src="/icons/sun.svg"
+            alt="sun"
+            class="icon large"
+            data-current-icon
+          />
+
+          <div class="date-time-container">
+            <div class="date" data-current-date>Friday Jul 5</div>
+            <div class="time" data-current-time>5:45 PM</div>
+          </div>
+        </article>
+
+        <article class="stats-container">
+          <div class="stat-card">
+            <h3 class="stat-title">Temperature High</h3>
+            <div class="stat-value" data-current-temp-high>30&deg;C</div>
+          </div>
+
+          <div class="stat-card">
+            <h4 class="stat-title">Temperature Low</h4>
+            <div class="stat-value" data-current-temp-low>30&deg;C</div>
+          </div>
+
+          <div class="stat-card">
+            <h4 class="stat-title">Feels Like High</h4>
+            <div class="stat-value" data-current-fl-high>30&deg;C</div>
+          </div>
+
+          <div class="stat-card">
+            <h4 class="stat-title">Feels Like Low</h4>
+            <div class="stat-value" data-current-fl-low>30&deg;C</div>
+          </div>
+
+          <div class="stat-card">
+            <h4 class="stat-title">Precipitation</h4>
+            <div class="stat-value" data-current-precipitation>2.3 mm</div>
+          </div>
+
+          <div class="stat-card">
+            <h4 class="stat-title">UV Index</h4>
+            <div class="stat-value" data-current-uv-index>3</div>
+          </div>
+
+          <div class="stat-card">
+            <h4 class="stat-title">Humidity</h4>
+            <div class="stat-value" data-current-humidity>76%</div>
+          </div>
+
+          <div class="stat-card">
+            <h4 class="stat-title">Day / Night</h4>
+            <div class="stat-value" data-current-day-night>Day</div>
+          </div>
+
+          <div class="stat-card">
+            <h4 class="stat-title">Wind Speed</h4>
+            <div class="stat-value" data-current-wind-speed>15.7 km/h</div>
+          </div>
+        </article>
+      </section>
+
+      <!-- hourly and daily weather section -->
+      <section class="section-right">
+        <!-- hourly -->
+        <article class="forecast-segment-container">
+          <h2 class="segment-title">Hourly Forecast</h2>
+
+          <div
+            class="segment-cards-container"
+            data-hourly-segment-cards-container
+          >
+            <div class="segment-card">
+              <h3 class="segment-card-title">05:00 AM</h3>
+              <div class="segment-card-temp">28&deg;C</div>
+              <img src="/icons/rainy-heavy.svg" alt="rainy" class="icon" />
+              <div class="segment-card-field">
+                <span class="field-title">Humidity</span>
+                <span class="field-value">77%</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like</span>
+                <span class="field-value">15.7&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Precipitation</span>
+                <span class="field-value">89 mm</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Wind Speed</span>
+                <span class="field-value">15.1 km/h</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">UV Index</span>
+                <span class="field-value">1.5</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Day/Night</span>
+                <span class="field-value">Day</span>
+              </div>
+            </div>
+            <div class="segment-card">
+              <h3 class="segment-card-title">05:00 AM</h3>
+              <div class="segment-card-temp">28&deg;C</div>
+              <img src="/icons/rainy-heavy.svg" alt="rainy" class="icon" />
+              <div class="segment-card-field">
+                <span class="field-title">Humidity</span>
+                <span class="field-value">77%</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like</span>
+                <span class="field-value">15.7&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Precipitation</span>
+                <span class="field-value">89 mm</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Wind Speed</span>
+                <span class="field-value">15.1 km/h</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">UV Index</span>
+                <span class="field-value">1.5</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Day/Night</span>
+                <span class="field-value">Day</span>
+              </div>
+            </div>
+            <div class="segment-card">
+              <h3 class="segment-card-title">05:00 AM</h3>
+              <div class="segment-card-temp">28&deg;C</div>
+              <img src="/icons/rainy-heavy.svg" alt="rainy" class="icon" />
+              <div class="segment-card-field">
+                <span class="field-title">Humidity</span>
+                <span class="field-value">77%</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like</span>
+                <span class="field-value">15.7&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Precipitation</span>
+                <span class="field-value">89 mm</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Wind Speed</span>
+                <span class="field-value">15.1 km/h</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">UV Index</span>
+                <span class="field-value">1.5</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Day/Night</span>
+                <span class="field-value">Day</span>
+              </div>
+            </div>
+            <div class="segment-card">
+              <h3 class="segment-card-title">05:00 AM</h3>
+              <div class="segment-card-temp">28&deg;C</div>
+              <img src="/icons/rainy-heavy.svg" alt="rainy" class="icon" />
+              <div class="segment-card-field">
+                <span class="field-title">Humidity</span>
+                <span class="field-value">77%</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like</span>
+                <span class="field-value">15.7&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Precipitation</span>
+                <span class="field-value">89 mm</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Wind Speed</span>
+                <span class="field-value">15.1 km/h</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">UV Index</span>
+                <span class="field-value">1.5</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Day/Night</span>
+                <span class="field-value">Day</span>
+              </div>
+            </div>
+            <div class="segment-card">
+              <h3 class="segment-card-title">05:00 AM</h3>
+              <div class="segment-card-temp">28&deg;C</div>
+              <img src="/icons/rainy-heavy.svg" alt="rainy" class="icon" />
+              <div class="segment-card-field">
+                <span class="field-title">Humidity</span>
+                <span class="field-value">77%</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like</span>
+                <span class="field-value">15.7&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Precipitation</span>
+                <span class="field-value">89 mm</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Wind Speed</span>
+                <span class="field-value">15.1 km/h</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">UV Index</span>
+                <span class="field-value">1.5</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Day/Night</span>
+                <span class="field-value">Day</span>
+              </div>
+            </div>
+            <div class="segment-card">
+              <h3 class="segment-card-title">05:00 AM</h3>
+              <div class="segment-card-temp">28&deg;C</div>
+              <img src="/icons/rainy-heavy.svg" alt="rainy" class="icon" />
+              <div class="segment-card-field">
+                <span class="field-title">Humidity</span>
+                <span class="field-value">77%</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like</span>
+                <span class="field-value">15.7&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Precipitation</span>
+                <span class="field-value">89 mm</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Wind Speed</span>
+                <span class="field-value">15.1 km/h</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">UV Index</span>
+                <span class="field-value">1.5</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Day/Night</span>
+                <span class="field-value">Day</span>
+              </div>
+            </div>
+            <div class="segment-card">
+              <h3 class="segment-card-title">05:00 AM</h3>
+              <div class="segment-card-temp">28&deg;C</div>
+              <img src="/icons/rainy-heavy.svg" alt="rainy" class="icon" />
+              <div class="segment-card-field">
+                <span class="field-title">Humidity</span>
+                <span class="field-value">77%</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like</span>
+                <span class="field-value">15.7&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Precipitation</span>
+                <span class="field-value">89 mm</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Wind Speed</span>
+                <span class="field-value">15.1 km/h</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">UV Index</span>
+                <span class="field-value">1.5</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Day/Night</span>
+                <span class="field-value">Day</span>
+              </div>
+            </div>
+            <div class="segment-card">
+              <h3 class="segment-card-title">05:00 AM</h3>
+              <div class="segment-card-temp">28&deg;C</div>
+              <img src="/icons/rainy-heavy.svg" alt="rainy" class="icon" />
+              <div class="segment-card-field">
+                <span class="field-title">Humidity</span>
+                <span class="field-value">77%</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like</span>
+                <span class="field-value">15.7&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Precipitation</span>
+                <span class="field-value">89 mm</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Wind Speed</span>
+                <span class="field-value">15.1 km/h</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">UV Index</span>
+                <span class="field-value">1.5</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Day/Night</span>
+                <span class="field-value">Day</span>
+              </div>
+            </div>
+            <div class="segment-card">
+              <h3 class="segment-card-title">05:00 AM</h3>
+              <div class="segment-card-temp">28&deg;C</div>
+              <img src="/icons/rainy-heavy.svg" alt="rainy" class="icon" />
+              <div class="segment-card-field">
+                <span class="field-title">Humidity</span>
+                <span class="field-value">77%</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like</span>
+                <span class="field-value">15.7&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Precipitation</span>
+                <span class="field-value">89 mm</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Wind Speed</span>
+                <span class="field-value">15.1 km/h</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">UV Index</span>
+                <span class="field-value">1.5</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Day/Night</span>
+                <span class="field-value">Day</span>
+              </div>
+            </div>
+            <div class="segment-card">
+              <h3 class="segment-card-title">05:00 AM</h3>
+              <div class="segment-card-temp">28&deg;C</div>
+              <img src="/icons/rainy-heavy.svg" alt="rainy" class="icon" />
+              <div class="segment-card-field">
+                <span class="field-title">Humidity</span>
+                <span class="field-value">77%</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like</span>
+                <span class="field-value">15.7&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Precipitation</span>
+                <span class="field-value">89 mm</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Wind Speed</span>
+                <span class="field-value">15.1 km/h</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">UV Index</span>
+                <span class="field-value">1.5</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Day/Night</span>
+                <span class="field-value">Day</span>
+              </div>
+            </div>
+            <div class="segment-card">
+              <h3 class="segment-card-title">05:00 AM</h3>
+              <div class="segment-card-temp">28&deg;C</div>
+              <img src="/icons/rainy-heavy.svg" alt="rainy" class="icon" />
+              <div class="segment-card-field">
+                <span class="field-title">Humidity</span>
+                <span class="field-value">77%</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like</span>
+                <span class="field-value">15.7&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Precipitation</span>
+                <span class="field-value">89 mm</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Wind Speed</span>
+                <span class="field-value">15.1 km/h</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">UV Index</span>
+                <span class="field-value">1.5</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Day/Night</span>
+                <span class="field-value">Day</span>
+              </div>
+            </div>
+            <div class="segment-card">
+              <h3 class="segment-card-title">05:00 AM</h3>
+              <div class="segment-card-temp">28&deg;C</div>
+              <img src="/icons/rainy-heavy.svg" alt="rainy" class="icon" />
+              <div class="segment-card-field">
+                <span class="field-title">Humidity</span>
+                <span class="field-value">77%</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like</span>
+                <span class="field-value">15.7&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Precipitation</span>
+                <span class="field-value">89 mm</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Wind Speed</span>
+                <span class="field-value">15.1 km/h</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">UV Index</span>
+                <span class="field-value">1.5</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Day/Night</span>
+                <span class="field-value">Day</span>
+              </div>
+            </div>
+            <div class="segment-card">
+              <h3 class="segment-card-title">05:00 AM</h3>
+              <div class="segment-card-temp">28&deg;C</div>
+              <img src="/icons/rainy-heavy.svg" alt="rainy" class="icon" />
+              <div class="segment-card-field">
+                <span class="field-title">Humidity</span>
+                <span class="field-value">77%</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like</span>
+                <span class="field-value">15.7&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Precipitation</span>
+                <span class="field-value">89 mm</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Wind Speed</span>
+                <span class="field-value">15.1 km/h</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">UV Index</span>
+                <span class="field-value">1.5</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Day/Night</span>
+                <span class="field-value">Day</span>
+              </div>
+            </div>
+            <div class="segment-card">
+              <h3 class="segment-card-title">05:00 AM</h3>
+              <div class="segment-card-temp">28&deg;C</div>
+              <img src="/icons/rainy-heavy.svg" alt="rainy" class="icon" />
+              <div class="segment-card-field">
+                <span class="field-title">Humidity</span>
+                <span class="field-value">77%</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like</span>
+                <span class="field-value">15.7&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Precipitation</span>
+                <span class="field-value">89 mm</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Wind Speed</span>
+                <span class="field-value">15.1 km/h</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">UV Index</span>
+                <span class="field-value">1.5</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Day/Night</span>
+                <span class="field-value">Day</span>
+              </div>
+            </div>
+            <div class="segment-card">
+              <h3 class="segment-card-title">05:00 AM</h3>
+              <div class="segment-card-temp">28&deg;C</div>
+              <img src="/icons/rainy-heavy.svg" alt="rainy" class="icon" />
+              <div class="segment-card-field">
+                <span class="field-title">Humidity</span>
+                <span class="field-value">77%</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like</span>
+                <span class="field-value">15.7&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Precipitation</span>
+                <span class="field-value">89 mm</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Wind Speed</span>
+                <span class="field-value">15.1 km/h</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">UV Index</span>
+                <span class="field-value">1.5</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Day/Night</span>
+                <span class="field-value">Day</span>
+              </div>
+            </div>
+            <div class="segment-card">
+              <h3 class="segment-card-title">05:00 AM</h3>
+              <div class="segment-card-temp">28&deg;C</div>
+              <img src="/icons/rainy-heavy.svg" alt="rainy" class="icon" />
+              <div class="segment-card-field">
+                <span class="field-title">Humidity</span>
+                <span class="field-value">77%</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like</span>
+                <span class="field-value">15.7&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Precipitation</span>
+                <span class="field-value">89 mm</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Wind Speed</span>
+                <span class="field-value">15.1 km/h</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">UV Index</span>
+                <span class="field-value">1.5</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Day/Night</span>
+                <span class="field-value">Day</span>
+              </div>
+            </div>
+            <div class="segment-card">
+              <h3 class="segment-card-title">05:00 AM</h3>
+              <div class="segment-card-temp">28&deg;C</div>
+              <img src="/icons/rainy-heavy.svg" alt="rainy" class="icon" />
+              <div class="segment-card-field">
+                <span class="field-title">Humidity</span>
+                <span class="field-value">77%</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like</span>
+                <span class="field-value">15.7&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Precipitation</span>
+                <span class="field-value">89 mm</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Wind Speed</span>
+                <span class="field-value">15.1 km/h</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">UV Index</span>
+                <span class="field-value">1.5</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Day/Night</span>
+                <span class="field-value">Day</span>
+              </div>
+            </div>
+            <div class="segment-card">
+              <h3 class="segment-card-title">05:00 AM</h3>
+              <div class="segment-card-temp">28&deg;C</div>
+              <img src="/icons/rainy-heavy.svg" alt="rainy" class="icon" />
+              <div class="segment-card-field">
+                <span class="field-title">Humidity</span>
+                <span class="field-value">77%</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like</span>
+                <span class="field-value">15.7&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Precipitation</span>
+                <span class="field-value">89 mm</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Wind Speed</span>
+                <span class="field-value">15.1 km/h</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">UV Index</span>
+                <span class="field-value">1.5</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Day/Night</span>
+                <span class="field-value">Day</span>
+              </div>
+            </div>
+            <div class="segment-card">
+              <h3 class="segment-card-title">05:00 AM</h3>
+              <div class="segment-card-temp">28&deg;C</div>
+              <img src="/icons/rainy-heavy.svg" alt="rainy" class="icon" />
+              <div class="segment-card-field">
+                <span class="field-title">Humidity</span>
+                <span class="field-value">77%</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like</span>
+                <span class="field-value">15.7&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Precipitation</span>
+                <span class="field-value">89 mm</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Wind Speed</span>
+                <span class="field-value">15.1 km/h</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">UV Index</span>
+                <span class="field-value">1.5</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Day/Night</span>
+                <span class="field-value">Day</span>
+              </div>
+            </div>
+            <div class="segment-card">
+              <h3 class="segment-card-title">05:00 AM</h3>
+              <div class="segment-card-temp">28&deg;C</div>
+              <img src="/icons/rainy-heavy.svg" alt="rainy" class="icon" />
+              <div class="segment-card-field">
+                <span class="field-title">Humidity</span>
+                <span class="field-value">77%</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like</span>
+                <span class="field-value">15.7&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Precipitation</span>
+                <span class="field-value">89 mm</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Wind Speed</span>
+                <span class="field-value">15.1 km/h</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">UV Index</span>
+                <span class="field-value">1.5</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Day/Night</span>
+                <span class="field-value">Day</span>
+              </div>
+            </div>
+            <div class="segment-card">
+              <h3 class="segment-card-title">05:00 AM</h3>
+              <div class="segment-card-temp">28&deg;C</div>
+              <img src="/icons/rainy-heavy.svg" alt="rainy" class="icon" />
+              <div class="segment-card-field">
+                <span class="field-title">Humidity</span>
+                <span class="field-value">77%</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like</span>
+                <span class="field-value">15.7&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Precipitation</span>
+                <span class="field-value">89 mm</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Wind Speed</span>
+                <span class="field-value">15.1 km/h</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">UV Index</span>
+                <span class="field-value">1.5</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Day/Night</span>
+                <span class="field-value">Day</span>
+              </div>
+            </div>
+            <div class="segment-card">
+              <h3 class="segment-card-title">05:00 AM</h3>
+              <div class="segment-card-temp">28&deg;C</div>
+              <img src="/icons/rainy-heavy.svg" alt="rainy" class="icon" />
+              <div class="segment-card-field">
+                <span class="field-title">Humidity</span>
+                <span class="field-value">77%</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like</span>
+                <span class="field-value">15.7&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Precipitation</span>
+                <span class="field-value">89 mm</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Wind Speed</span>
+                <span class="field-value">15.1 km/h</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">UV Index</span>
+                <span class="field-value">1.5</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Day/Night</span>
+                <span class="field-value">Day</span>
+              </div>
+            </div>
+            <div class="segment-card">
+              <h3 class="segment-card-title">05:00 AM</h3>
+              <div class="segment-card-temp">28&deg;C</div>
+              <img src="/icons/rainy-heavy.svg" alt="rainy" class="icon" />
+              <div class="segment-card-field">
+                <span class="field-title">Humidity</span>
+                <span class="field-value">77%</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like</span>
+                <span class="field-value">15.7&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Precipitation</span>
+                <span class="field-value">89 mm</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Wind Speed</span>
+                <span class="field-value">15.1 km/h</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">UV Index</span>
+                <span class="field-value">1.5</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Day/Night</span>
+                <span class="field-value">Day</span>
+              </div>
+            </div>
+            <div class="segment-card">
+              <h3 class="segment-card-title">05:00 AM</h3>
+              <div class="segment-card-temp">28&deg;C</div>
+              <img src="/icons/rainy-heavy.svg" alt="rainy" class="icon" />
+              <div class="segment-card-field">
+                <span class="field-title">Humidity</span>
+                <span class="field-value">77%</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like</span>
+                <span class="field-value">15.7&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Precipitation</span>
+                <span class="field-value">89 mm</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Wind Speed</span>
+                <span class="field-value">15.1 km/h</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">UV Index</span>
+                <span class="field-value">1.5</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Day/Night</span>
+                <span class="field-value">Day</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- daily -->
+        <article class="forecast-segment-container">
+          <h2 class="segment-title">7-Day Forecast</h2>
+
+          <div
+            class="segment-cards-container"
+            data-daily-segment-cards-container
+          >
+            <div class="segment-card">
+              <h3 class="segment-card-title">Today</h3>
+              <div class="segment-card-date">July 09</div>
+              <img src="/icons/rainy-heavy.svg" alt="rainy" class="icon" />
+
+              <div class="segment-card-field">
+                <span class="field-title">Temp High</span>
+                <span class="field-value">17&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Temp Low</span>
+                <span class="field-value">13&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like High</span>
+                <span class="field-value">16.5&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like Low</span>
+                <span class="field-value">12&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Precipitation</span>
+                <span class="field-value">1.7 mm</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">UV Index</span>
+                <span class="field-value">4.45</span>
+              </div>
+            </div>
+            <div class="segment-card">
+              <h3 class="segment-card-title">Today</h3>
+              <div class="segment-card-date">July 09</div>
+              <img src="/icons/rainy-heavy.svg" alt="rainy" class="icon" />
+
+              <div class="segment-card-field">
+                <span class="field-title">Temp High</span>
+                <span class="field-value">17&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Temp Low</span>
+                <span class="field-value">13&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like High</span>
+                <span class="field-value">16.5&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like Low</span>
+                <span class="field-value">12&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Precipitation</span>
+                <span class="field-value">1.7 mm</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">UV Index</span>
+                <span class="field-value">4.45</span>
+              </div>
+            </div>
+            <div class="segment-card">
+              <h3 class="segment-card-title">Today</h3>
+              <div class="segment-card-date">July 09</div>
+              <img src="/icons/rainy-heavy.svg" alt="rainy" class="icon" />
+
+              <div class="segment-card-field">
+                <span class="field-title">Temp High</span>
+                <span class="field-value">17&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Temp Low</span>
+                <span class="field-value">13&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like High</span>
+                <span class="field-value">16.5&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like Low</span>
+                <span class="field-value">12&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Precipitation</span>
+                <span class="field-value">1.7 mm</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">UV Index</span>
+                <span class="field-value">4.45</span>
+              </div>
+            </div>
+            <div class="segment-card">
+              <h3 class="segment-card-title">Today</h3>
+              <div class="segment-card-date">July 09</div>
+              <img src="/icons/rainy-heavy.svg" alt="rainy" class="icon" />
+
+              <div class="segment-card-field">
+                <span class="field-title">Temp High</span>
+                <span class="field-value">17&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Temp Low</span>
+                <span class="field-value">13&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like High</span>
+                <span class="field-value">16.5&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like Low</span>
+                <span class="field-value">12&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Precipitation</span>
+                <span class="field-value">1.7 mm</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">UV Index</span>
+                <span class="field-value">4.45</span>
+              </div>
+            </div>
+            <div class="segment-card">
+              <h3 class="segment-card-title">Today</h3>
+              <div class="segment-card-date">July 09</div>
+              <img src="/icons/rainy-heavy.svg" alt="rainy" class="icon" />
+
+              <div class="segment-card-field">
+                <span class="field-title">Temp High</span>
+                <span class="field-value">17&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Temp Low</span>
+                <span class="field-value">13&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like High</span>
+                <span class="field-value">16.5&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like Low</span>
+                <span class="field-value">12&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Precipitation</span>
+                <span class="field-value">1.7 mm</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">UV Index</span>
+                <span class="field-value">4.45</span>
+              </div>
+            </div>
+            <div class="segment-card">
+              <h3 class="segment-card-title">Today</h3>
+              <div class="segment-card-date">July 09</div>
+              <img src="/icons/rainy-heavy.svg" alt="rainy" class="icon" />
+
+              <div class="segment-card-field">
+                <span class="field-title">Temp High</span>
+                <span class="field-value">17&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Temp Low</span>
+                <span class="field-value">13&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like High</span>
+                <span class="field-value">16.5&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like Low</span>
+                <span class="field-value">12&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Precipitation</span>
+                <span class="field-value">1.7 mm</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">UV Index</span>
+                <span class="field-value">4.45</span>
+              </div>
+            </div>
+            <div class="segment-card">
+              <h3 class="segment-card-title">Today</h3>
+              <div class="segment-card-date">July 09</div>
+              <img src="/icons/rainy-heavy.svg" alt="rainy" class="icon" />
+
+              <div class="segment-card-field">
+                <span class="field-title">Temp High</span>
+                <span class="field-value">17&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Temp Low</span>
+                <span class="field-value">13&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like High</span>
+                <span class="field-value">16.5&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Feels Like Low</span>
+                <span class="field-value">12&deg;C</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">Precipitation</span>
+                <span class="field-value">1.7 mm</span>
+              </div>
+              <div class="segment-card-field">
+                <span class="field-title">UV Index</span>
+                <span class="field-value">4.45</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <!-- hourly card template -->
+    <template data-hourly-temp-card-template>
+      <div class="segment-card" data-segment-card>
+        <h3 class="segment-card-title" data-segment-card-title>05:00 AM</h3>
+        <div class="segment-card-temp" data-segment-card-temp>28&deg;C</div>
+        <img
+          src="/icons/rainy-heavy.svg"
+          alt="rainy"
+          class="icon"
+          data-segment-card-icon
+        />
+        <div class="segment-card-field">
+          <span class="field-title">Humidity</span>
+          <span class="field-value" data-segment-card-humidity>77%</span>
+        </div>
+        <div class="segment-card-field">
+          <span class="field-title">Feels Like</span>
+          <span class="field-value" data-segment-card-feels-like>15.7</span>
+        </div>
+        <div class="segment-card-field">
+          <span class="field-title">Precipitation</span>
+          <span class="field-value" data-segment-card-precipitation>89 mm</span>
+        </div>
+        <div class="segment-card-field">
+          <span class="field-title">Wind Speed</span>
+          <span class="field-value" data-segment-card-wind-speed
+            >15.1 km/h</span
+          >
+        </div>
+        <div class="segment-card-field">
+          <span class="field-title">UV Index</span>
+          <span class="field-value" data-segment-card-uv-index>1.5</span>
+        </div>
+        <div class="segment-card-field">
+          <span class="field-title">Day/Night</span>
+          <span class="field-value" data-segment-card-day-night>Day</span>
+        </div>
+      </div>
+    </template>
+
+    <!-- daily card template -->
+    <template data-daily-temp-card-template>
+      <div class="segment-card" data-segment-card>
+        <h3 class="segment-card-title" data-segment-card-title>Today</h3>
+        <div class="segment-card-date" data-segment-card-date>July 09</div>
+        <img
+          src="/icons/rainy-heavy.svg"
+          alt="rainy"
+          class="icon"
+          data-segment-card-icon
+        />
+
+        <div class="segment-card-field">
+          <span class="field-title">Temp High</span>
+          <span class="field-value" data-segment-card-temp-high>17&deg;C</span>
+        </div>
+        <div class="segment-card-field">
+          <span class="field-title">Temp Low</span>
+          <span class="field-value" data-segment-card-temp-low>13&deg;C</span>
+        </div>
+        <div class="segment-card-field">
+          <span class="field-title">Feels Like High</span>
+          <span class="field-value" data-segment-card-feel-like-high
+            >16.5&deg;C</span
+          >
+        </div>
+        <div class="segment-card-field">
+          <span class="field-title">Feels Like Low</span>
+          <span class="field-value" data-segment-card-feel-like-low
+            >12&deg;C</span
+          >
+        </div>
+        <div class="segment-card-field">
+          <span class="field-title">Precipitation</span>
+          <span class="field-value" data-segment-card-precipitation
+            >1.7 mm</span
+          >
+        </div>
+        <div class="segment-card-field">
+          <span class="field-title">UV Index</span>
+          <span class="field-value" data-segment-card-uv-index>4.45</span>
+        </div>
+      </div>
+    </template>
+  </body>
+</html>
