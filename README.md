@@ -9,7 +9,7 @@ Hello! I am Pinak Dwivedi.
 I have created this project with Vite, HTML, CSS, and Typescript.
 This is a weather forecast app with a very nice, simple, and compelling UI.
 
-### How To Play
+### How To Use
 
 At first, it asks for your location access so that it can provide you with weather information about your location.
 When you allow location access, it fetches current, hourly, and daily weather information about your location.
